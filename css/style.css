@@ -8,10 +8,23 @@ header {
 nav {
     background-color: #aed8e6;
 }
+/* commented out per assignment: existing li styling
 li {
     display: inline-block;
     width: 30%;
     text-align: center;
+}
+*/
+/* Nav layout: use inline-block and ~80% width */
+nav {
+    background-color: #aed8e6;
+    display: inline-block;
+    width: 80%;
+}
+/* only images inside nav */
+nav img {
+    width: 10%;
+    height: auto;
 }
 h1 {
     text-align: center;
@@ -26,5 +39,52 @@ footer {
 }
 p {
     line-height: 2;
+}
+
+/* accessible skip link — hidden until focused */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    background: #ffffff;
+    padding: 8px 12px;
+    z-index: 1000;
+    border: 2px solid #000089;
+}
+
+/* grid layout for neighborhood page */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-items: start;
+    row-gap: 1rem;
+    column-gap: 2rem;
+}
+.grid img {
+    width: 100%;
+    height: auto;
+}
+
+/* flex layout for parks page */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* improve link contrast */
+a {
+    color: #003366;
 }
 
